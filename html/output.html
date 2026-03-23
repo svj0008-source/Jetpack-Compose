@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Classes</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <title>Output</title>
 </head>
 <body class="page">
     <header class="header">
         <h1 class="title">Jetpack compose</h1>
-        <h2 class="category">Classes</h2>
+        <h2 class="category">Output</h2>
     </header>
     <nav class="menu">
         <h3 class="menuConcept">Home</h3>
         <h3 class="menuConcept">Output</h3>
         <h3 class="menuConcept">Data types</h3>
-        <h3 class="menuConcept">Variables</h3>
         <h3 class="menuConcept">Operators</h3>
         <h3 class="menuConcept">Conditions</h3>
         <h3 class="menuConcept">Loops</h3>
@@ -26,28 +25,52 @@
     </nav>
     <main class="main">
         <section class="concept">
-            <h3 class="conceptName"></h3>
+            <h3 class="conceptName">println()</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-class Class(var var: Type = value)
-var object=Class(value1, value2)
+
+  println("Hello World")
+
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It organizes data in blocks where you can make instances
+                    The println() function is used to output values/print text
                 </div>
                 <div class="example">
 <pre>
 <code>
-class Pair(var num1: Int, num2 : Int)
-
 fun main() {
-  val c1 = Pair(1,2)
+  println("Hello World")
 }
 </code>
+</pre>
+                </div>
+            </div>
+        </section>
+        <section class="concept">
+            <h3 class="conceptName">print()</h3>
+            <div class="conceptContent">
+                <div class="definition">
+<pre>
+<code>
+print("Hello World!")
+</code>
+</pre>
+                </div>
+                <div class="explanation">
+                    There is also a print() function, which is similar to println(). The only difference is that it does not insert a new line at the end of the output
+                </div>
+                <div class="example">
+<pre>
+<code>
+fun main() {
+  print("Hello World! ")
+  print("I am learning Kotlin. ")
+  print("It is awesome!")
+}</code>
 </pre>
                 </div>
             </div>
