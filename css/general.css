@@ -226,14 +226,16 @@
         grid-column:1/2;
         display:flex;
         flex-direction:column;
-        justify-content:flex-start;
-        align-items:center;
-        position:relative;
-        left:50px;
+        justify-content:center;
+        gap:20px;
+        position:fixed;
+        left:100px;
+        height:100%;
     }
 
     .menuConcept
     {
+        margin:0px;
         width:100px;
         height:40px;
     }
