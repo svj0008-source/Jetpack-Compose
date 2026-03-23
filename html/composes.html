@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/composes.css">
+    <title>Composes</title>
+</head>
+<body class="page">
+    <header class="header">
+        <h1 class="title">Jetpack compose</h1>
+        <h2 class="category">Composes</h2>
+    </header>
+    <nav class="menu">
+        <h3 class="menuConcept">Home</h3>
+    </nav>
+    <main class="main">
+        <article class="part">
+            <h3 class="partTitle">Composes</h3>
+            <div class="partContent">
+                <section class="concept">
+                <h3 class="conceptName">Column</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+Column(
+    modifier=Modifier.
+    verticalArrangement=Arrangement.
+    horizontalAlignment:Alignment.
+) {
+
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        The elements are arranged vertically
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Column {
+    Text("Element 1")
+    Text("Element 2")
+    Text("Element 3")
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">Row</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+Row(
+    modifier=Modifier.
+    horizontalArrangement=Arrangement.
+    verticalAlignment=Alignment.
+) {
+
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        The elements are arranged horizontally
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Row {
+    Text("Element 1")
+    Text("Element 2")
+    Text("Element 3")
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">Text</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+Text(
+    text=
+    modifier=Modifier.
+    color=Color.
+    fontSize=
+    fontFamily=
+) {
+
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It is a text box
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Text(
+    text = "Hi Jetpack Compose!",
+    color = Color.Blue,
+    fontSize = 20.sp,
+    fontWeight = FontWeight.Bold,
+    textAlign = TextAlign.Center
+)
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">Button</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+Button(
+    onClick={}
+    modifier=Modifier.
+    colors=ButtonColors.
+) {
+
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It is a button, when you click it a block of code is executed
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Button(
+    onClick = { 
+        // Action
+        println("Pressed!")
+    }
+) {
+    Text("Press me")
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">TextField</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+Button(
+    value=
+    modifier=Modifier.
+    colors=TextFieldColors.
+) {
+
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It is an input to write text
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+var text by remember { mutableStateOf("") }
+
+TextField(
+    value = text,
+    onValueChange = { newText -> text = newText },
+    label = { Text("Name") },
+    placeholder = { Text("Write your name") }
+)
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </article>
+        <article class="part">
+            <h3 class="partTitle">Modifier</h3>
+            <div class="partContent">
+                <section class="concept">
+                <h3 class="conceptName">fillMaxWidth</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+modifier=Modifier.fillMaxWidth()
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It makes the box with full width of the box where it is included
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Button(
+    onClick = { println("Pressed") },
+    modifier = Modifier
+        .fillMaxWidth()
+) {
+    Text("Button with full width")
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">fillMaxSize</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+modifier=Modifier.fillMaxHeight()
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It makes the box with full height of the box where it is included
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Box(
+    modifier = Modifier
+        .fillMaxHeight()
+) {
+    Text(
+        text = "Full height box",
+    )
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">padding</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+modifier=Modifier.padding()
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It gives a margin to the padding. It can be top, bottom, left or right
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Text(
+    text = "Text width padding",
+    modifier = Modifier
+        .padding(16.dp)
+)
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="concept">
+                <h3 class="conceptName">border</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+modifier=Modifier.border()
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It sets the border features of the box
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+Box(
+    modifier = Modifier
+        .border(
+            width = 4.dp,                     
+            color = Color.Blue,               
+            shape = RoundedCornerShape(12.dp)
+        )
+) {
+    Text(
+        text = "Box width border",
+    )
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </article>
+        <article class="part">
+            <h3 class="partTitle">NavController</h3>
+            <div class="partContent">
+                <section class="concept">
+                <h3 class="conceptName"></h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+val navController = rememberNavController()
+
+NavHost(
+    navController = navController,
+    startDestination =
+) {
+    composable() {
+    }
+    composable() {
+    }
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It changes the screen that is displayed
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+val navController = rememberNavController()
+
+NavHost(
+    navController = navController,
+    startDestination = "home"  // Ruta inicial
+) {
+    composable("home") {
+        HomeScreen(navController)
+    }
+    composable("details") {
+        DetailsScreen(navController)
+    }
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </article>
+        <article class="part">
+            <h3 class="partTitle">ViewModel</h3>
+            <div>
+                <section class="concept">
+                <h3 class="conceptName">Int</h3>
+                <div class="conceptContent">
+                    <div class="definition">
+<pre>
+<code>
+ class Class : ViewModel() {
+}
+</code>
+</pre>
+                    </div>
+                    <div class="explanation">
+                        It allows a page where everything runs independent
+                    </div>
+                    <div class="example">
+<pre>
+<code>
+ class CounterViewModel : ViewModel() {
+    private val counter = mutableStateOf(0)
+    val counter: Int get() = _counter.value
+
+    fun increase() {
+        _counter.value++
+    }
+}
+
+@Composable
+fun CounterScreen(viewModel: CounterViewModel = viewModel()) {
+Column {
+    Text("Counter: ${viewModel.counter}")
+    Button(onClick = { viewModel.increase() }) {
+        Text("Increase")
+    }
+}
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        Designed by: Sandro and Steven
+    </footer>
+</body>
+</html>
