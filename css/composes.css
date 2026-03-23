@@ -14,6 +14,15 @@
     color:green;
 }
 
+.part
+{
+    border-style:solid;
+    border-color:rgb(6, 6, 190);
+    border-width:5px;
+    border-radius:10px;
+    padding:10px;
+}
+
 .menuConcept
 {
     display:flex;
@@ -115,6 +124,21 @@
 
     }
 
+    .part
+    {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .partContent
+    {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        width:100%;
+        height:100%;
+    }
+
     .menu
     {
         display:flex;
@@ -143,6 +167,7 @@
         display:grid;
         grid-template-rows:1fr 1fr;
         grid-template-columns:1fr 1fr;
+        gap:10px;
     }
 
     .concept
@@ -267,7 +292,7 @@
         width:400px;
     }
 
-    .foote  r
+    .footer
     {
         grid-row:3/4;
         grid-column:1/3;
