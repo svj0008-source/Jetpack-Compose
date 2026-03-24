@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/general.css">
-    <title>Data types</title>
+    <title>Arrays</title>
 </head>
 <body class="page">
     <header class="header">
         <h1 class="title">Jetpack compose</h1>
-        <h2 class="category">Data types</h2>
+        <h2 class="category">Arrays</h2>
     </header>
     <nav class="menu">
         <a href="../index.html" class="menuConcept">Home</a>
@@ -25,88 +26,81 @@
     </nav>
     <main class="main">
         <section class="concept">
-            <h3 class="conceptName">Int</h3>
+            <h3 class="conceptName">arrayOf()</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Int = value;
+   val letters = arrayOf("a","b","c","d")
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores whole numbers
-                </div>
+                Arrays are used to store multiple values in a single variable, instead of creating separate variables for each value.</div>
                 <div class="example">
 <pre>
 <code>
-val num: Int = 10;
+val letters = arrayOf("a","b","c")
+println(letters[0])
+// Outputs a 
 </code>
 </pre>
                 </div>
             </div>
         </section>
         <section class="concept">
-            <h3 class="conceptName">Double</h3>
+            <h3 class="conceptName">size</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Double = value;
+val letters = arrayOf("a","b","c")
+println(letters.size)
+// Outputs 3 
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores a decimal number
-                </div>
+                    To find out how many elements an array have, use the size property</div>
                 <div class="example">
 <pre>
 <code>
-val num: Double = value;
+fun main() {
+    val letters = arrayOf("a","b","c")
+
+    for (i in 0 until letters.size) {
+        println(letters[i])
+    }
+}
 </code>
 </pre>
                 </div>
             </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">String</h3>
+<h3 class="conceptName">for</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val text: String = value;
+fun main() {
+    for (i in 1..5) {
+        println(i)
+    }
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores text
-                </div>
+                    You can loop through the array elements with the for loop, which you will learn even more about in the next chapter.</div>
                 <div class="example">
 <pre>
 <code>
-val text: String = "example";
-</code>
-</pre>
-                </div>
-            </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">Boolean</h3>
-            <div class="conceptContent">
-                <div class="definition">
-<pre>
-<code>
-val bool: Boolean = value;
-</code>
-</pre>
-                </div>
-                <div class="explanation">
-                    It stores a value that can be true or false
-                </div>
-                <div class="example">
-<pre>
-<code>
-val bool: Boolean = true;
+fun main() {
+    val letters = arrayOf("a","b","c")
+
+    for (letter in letters) {
+        println(letter)
+    }
+}
 </code>
 </pre>
                 </div>

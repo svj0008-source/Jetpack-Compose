@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/general.css">
-    <title>Data types</title>
+    <title>Output</title>
 </head>
 <body class="page">
     <header class="header">
         <h1 class="title">Jetpack compose</h1>
-        <h2 class="category">Data types</h2>
+        <h2 class="category">Output</h2>
     </header>
     <nav class="menu">
         <a href="../index.html" class="menuConcept">Home</a>
@@ -25,44 +25,29 @@
     </nav>
     <main class="main">
         <section class="concept">
-            <h3 class="conceptName">Int</h3>
+            <h3 class="conceptName">var/val =</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Int = value;
+
+    var variableName = value
+    val variableName = value    
+
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores whole numbers
+                    To create a variable, use var or val, and assign a value to it with the equal sign (=)
                 </div>
                 <div class="example">
 <pre>
 <code>
-val num: Int = 10;
-</code>
-</pre>
-                </div>
-            </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">Double</h3>
-            <div class="conceptContent">
-                <div class="definition">
-<pre>
-<code>
-val num: Double = value;
-</code>
-</pre>
-                </div>
-                <div class="explanation">
-                    It stores a decimal number
-                </div>
-                <div class="example">
-<pre>
-<code>
-val num: Double = value;
+var name = "John"
+val birthyear = 1975
+
+println(name)          // Print the value of name
+println(birthyear)     // Print the value of birthyear
 </code>
 </pre>
                 </div>
@@ -74,39 +59,21 @@ val num: Double = value;
                 <div class="definition">
 <pre>
 <code>
-val text: String = value;
+var text: String = ""
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores text
+                    There is also a print() function, which is similar to println(). The only difference is that it does not insert a new line at the end of the output
                 </div>
                 <div class="example">
 <pre>
 <code>
-val text: String = "example";
-</code>
-</pre>
-                </div>
-            </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">Boolean</h3>
-            <div class="conceptContent">
-                <div class="definition">
-<pre>
-<code>
-val bool: Boolean = value;
-</code>
-</pre>
-                </div>
-                <div class="explanation">
-                    It stores a value that can be true or false
-                </div>
-                <div class="example">
-<pre>
-<code>
-val bool: Boolean = true;
+var name: String = "John" // String
+val birthyear: Int = 1975 // Int
+
+println(name)
+println(birthyear)
 </code>
 </pre>
                 </div>

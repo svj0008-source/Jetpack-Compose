@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/general.css">
-    <title>Data types</title>
+    <title>Conditions</title>
 </head>
 <body class="page">
     <header class="header">
         <h1 class="title">Jetpack compose</h1>
-        <h2 class="category">Data types</h2>
+        <h2 class="category">Conditions</h2>
     </header>
     <nav class="menu">
         <a href="../index.html" class="menuConcept">Home</a>
@@ -25,88 +25,126 @@
     </nav>
     <main class="main">
         <section class="concept">
-            <h3 class="conceptName">Int</h3>
+            <h3 class="conceptName">If</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Int = value;
+    if (condition) {
+  // block of code to be executed if the condition is true
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores whole numbers
-                </div>
+                Use if to specify a block of code to be executed if a condition is true.</div>
                 <div class="example">
 <pre>
 <code>
-val num: Int = 10;
+if (20 > 18) {
+  println("20 is greater than 18")
+}
 </code>
 </pre>
                 </div>
             </div>
         </section>
         <section class="concept">
-            <h3 class="conceptName">Double</h3>
+            <h3 class="conceptName">Else</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Double = value;
+if (condition) {
+  //if the condition is true
+} else {
+  //if the condition is false
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores a decimal number
-                </div>
+                    Use else to specify a block of code to be executed if the condition is false.</div>
                 <div class="example">
 <pre>
 <code>
-val num: Double = value;
+val time = 20
+if (time < 18) {
+  println("Good day.")
+} else {
+  println("Good evening.")
+}
+// Outputs "Good evening."
 </code>
 </pre>
                 </div>
             </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">String</h3>
+<h3 class="conceptName">Else if</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val text: String = value;
+if (condition1) {
+  //if condition1 is true
+} else if (condition2) {
+  //if the condition1 is false and condition2 is true
+} else {
+  //if the condition1 is false and condition2 is false
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores text
-                </div>
+                    Use else if to specify a new condition if the first condition is false.</div>
                 <div class="example">
 <pre>
 <code>
-val text: String = "example";
+val time = 22
+if (time < 10) {
+  println("Good morning.")
+} else if (time < 20) {
+  println("Good day.")
+} else {
+  println("Good evening.")
+}
+// Outputs "Good evening."
 </code>
 </pre>
                 </div>
             </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">Boolean</h3>
+            <h3 class="conceptName">When</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val bool: Boolean = value;
+fun main() {
+    val number = 2
+
+    when (number) {
+        1 -> println("One")
+        2 -> println("Two")
+        3 -> println("Three")
+        else -> println("Unknown number")
+    }
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores a value that can be true or false
-                </div>
+                    Instead of writing many if..else expressions, you can use the when expression, which is much easier to read.
+             </div>
                 <div class="example">
 <pre>
 <code>
-val bool: Boolean = true;
+fun main() {
+    val age = 16
+
+    when {
+        age < 13 -> println("Child")
+        age < 18 -> println("Teenager")
+        else -> println("Adult")
+    }
+}
 </code>
 </pre>
                 </div>

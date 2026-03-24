@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/general.css">
-    <title>Data types</title>
+    <title>Operators</title>
 </head>
 <body class="page">
     <header class="header">
         <h1 class="title">Jetpack compose</h1>
-        <h2 class="category">Data types</h2>
+        <h2 class="category">Operators</h2>
     </header>
     <nav class="menu">
         <a href="../index.html" class="menuConcept">Home</a>
@@ -25,88 +26,131 @@
     </nav>
     <main class="main">
         <section class="concept">
-            <h3 class="conceptName">Int</h3>
+            <h3 class="conceptName">Arithmetic operators</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Int = value;
+var x = 100 + 50
+var x = 100 - 50
+var x = 100 * 50
+var x = 100 / 50
+var x = 100 % 50
+var x = 100 ++ 50
+var x = 100 -- 50
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores whole numbers
+                    100 and 50 are operands and the symbols are the Operators.
                 </div>
                 <div class="example">
 <pre>
 <code>
-val num: Int = 10;
+var sum1 = 100 + 50 
+var sum2 = sum1 + 250  
+var sum3 = sum2 + sum2 
 </code>
 </pre>
                 </div>
             </div>
         </section>
         <section class="concept">
-            <h3 class="conceptName">Double</h3>
+            <h3 class="conceptName">Assignment operators</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val num: Double = value;
+var x = 10
+x += 5
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores a decimal number
-                </div>
+                    The addition assignment operator (+=) adds a value to a variable               </div>
                 <div class="example">
 <pre>
 <code>
-val num: Double = value;
+fun main() {
+    var numero = 10
+
+    numero += 5
+
+    println(numero) // Resultado: 15
+}
 </code>
 </pre>
                 </div>
             </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">String</h3>
+<h3 class="conceptName">Comparison Operators</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val text: String = value;
+fun main() {
+    val a = 10
+    val b = 20
+
+    println(a == b)  // false  (equal)
+    println(a != b)  // true   (not equal)
+    println(a > b)   // false  (greater than)
+    println(a < b)   // true   (less than)
+    println(a >= b)  // false  (greater or equal)
+    println(a <= b)  // true   (less or equal)
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores text
-                </div>
+                    Comparison operators are used to compare two values, and returns a Boolean value: either true or false.               </div>
                 <div class="example">
 <pre>
 <code>
-val text: String = "example";
+fun main() {
+    val age = 18
+
+    if (age >= 18) {
+        println("You are an adult")
+    } else {
+        println("You are a minor")
+    }
+}
 </code>
 </pre>
                 </div>
             </div>
-        </section>
-        <section class="concept">
-            <h3 class="conceptName">Boolean</h3>
+            <h3 class="conceptName">Logical Operators</h3>
             <div class="conceptContent">
                 <div class="definition">
 <pre>
 <code>
-val bool: Boolean = value;
+fun main() {
+    val a = true
+    val b = false
+
+    println(a && b) // false (AND)
+    println(a || b) // true  (OR)
+    println(!a)     // false (NOT)
+}
 </code>
 </pre>
                 </div>
                 <div class="explanation">
-                    It stores a value that can be true or false
-                </div>
+                    Logical operators are used to determine the logic between variables or values
+             </div>
                 <div class="example">
 <pre>
 <code>
-val bool: Boolean = true;
+fun main() {
+    val age = 20
+    val hasID = true
+
+    if (age >= 18 && hasID) {
+        println("You can enter")
+    } else {
+        println("Access denied")
+    }
+}
 </code>
 </pre>
                 </div>
